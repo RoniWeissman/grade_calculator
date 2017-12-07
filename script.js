@@ -32,18 +32,24 @@ function calculateCurrentGrade(){
     All the weighted values of the sections are added together and divided by
     80, as the current grade is only 80% of the total grade including the final.
      */
-    var currentGrade = (averageHW + averageQuiz + averageTest + averageMid) / (hwWeight + quizWeight + testWeight + midtWeight);
-    console.log(currentGrade);
-    if(isNaN(currentGrade)){
-        document.getElementById("currentGradeIs").innerHTML = "ERROR";
+    var finalWeight = parseInt(document.getElementById("finalWeight").value) / 100;
+
+    if((hwWeight + quizWeight + testWeight + midtWeight + finalWeight) * 100  != 100) {
+        document.getElementById("currentGradeIs").innerHTML = "ERROR: WEIGHTS OVER 100%";
     } else {
-        if(currentGrade >= 0 && currentGrade < 300) {
-            document.getElementById("currentGradeIs").innerHTML = "You have a " +currentGrade.toPrecision(4) + " in this class!";
+        var currentGrade = (averageHW + averageQuiz + averageTest + averageMid) / (hwWeight + quizWeight + testWeight + midtWeight);
+        console.log(currentGrade);
+        if(isNaN(currentGrade)){
+            document.getElementById("currentGradeIs").innerHTML = "ERROR: INPUT NaN";
         } else {
-            document.getElementById("currentGradeIs").innerHTML = "ERROR";
+            if(currentGrade >= 0 && currentGrade < 300) {
+                document.getElementById("currentGradeIs").innerHTML = "You have a " +currentGrade.toPrecision(4) + " in this class!";
+            } else {
+                document.getElementById("currentGradeIs").innerHTML = "ERROR: INPUT UNREASONABLE";
+
+            }
 
         }
-
     }
     return currentGrade;
 }
