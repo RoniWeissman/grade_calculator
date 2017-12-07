@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <title>Grade Calculator</title>
+</head>
+<body>
+<h1>Grade Calculator</h1>
+
+<p>Directions: List all the grades in each category in a comma-separated list.</p>
+<p>The weight of each category should be out of 100, as in the example.</p>
+
+<table id="table" style="width:100%">
+    <tr class="hwColor">
+        <th><p id="hw">Homework Grades:</p></th>
+        <th><p id="hwWeight">Homework Weight:</p></th>
+    </tr>
+    <tr class="hwColor">
+        <th><input type="text" id="homework" value="100, 100, 100" size="25"></th>
+        <th><input type="text" id="homeworkWeight" value="10" size="25"></th>
+    </tr>
+    <tr class="quizColor">
+        <th><p id="quiz">Quiz Grades:</p></th>
+        <th><p id="qWeight">Quiz Weight:</p></th>
+    </tr>
+    <tr class="quizColor">
+        <th><input type="text" id="quizzes" value="88, 87, 85" size="25"></th>
+        <th><input type="text" id="quizWeight" value="15" size="25"></th>
+    </tr>
+    <tr class="testColor">
+        <th><p id="test">Test Grades:</p></th>
+        <th><p id="tWeight">Test Weight:</p></th>
+    </tr>
+    <tr class="testColor">
+        <th><input type="text" id="tests" value="73, 78, 76" size="25"></th>
+        <th><input type="text" id="testWeight" value="45" size="25"></th>
+    </tr>
+    <tr class="midtColor">
+        <th><p id="mid">Midterm Grades:</p></th>
+        <th><p id="midWeight">Midterm Weight:</p></th>
+    </tr>
+    <tr class="midtColor">
+        <th><input type="text" id="midterms" value="67, 66, 64" size="25"></th>
+        <th><input type="text" id="midtWeight" value="10" size="25"></th>
+    </tr>
+</table>
+
+<button id="submitButton" onclick="calculateCurrentGrade()">Calculate current grade</button>
+
+<div class="currentGradeDisplay"><p id="currentGradeIs"></p></div>
+
+
+
+<table style="width:90%">
+    <tr>
+        <th><p id="goal">What grade do you want in the class?</p></th>
+        <th><p id="fWeight">Final Weight:</p></th>
+    </tr>
+    <tr>
+        <th>
+            <input type="text" id="goalGrade" value="97" size="25">
+        </th>
+        <th>
+            <input type="text" id="finalWeight" value="20" size="25">
+        </th>
+    </tr>
+</table>
+
+<button id="finalButton" onclick="calculateGradeNeeded(calculateCurrentGrade())">What grade do you need on the final?</button>
+
+<div class="finalGradeDisplay"><p id="finalGradeNeeded"></p></div>
+</body>
+</html>

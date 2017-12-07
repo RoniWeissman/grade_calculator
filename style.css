@@ -1,0 +1,69 @@
+html {
+    text-align: center;
+    background-color: #e0e8ef;
+}
+
+#submitButton {
+    font-family: Cambria;
+    font-size: 20px;
+    padding: 10px 23px;
+    border-radius: 8px;
+    background-color: gainsboro;
+    color: black;
+    border: 2px;
+}
+
+#submitButton:hover {
+    background-color: #6969ce;
+    color: white;
+}
+
+#finalButton {
+    font-family: Cambria;
+    font-size: 20px;
+    padding: 10px 23px;
+    border-radius: 8px;
+    background-color: gainsboro;
+    color: black;
+    border: 2px;
+}
+
+#finalButton:hover {
+    background-color: #6969ce;
+    color: white;
+}
+
+p {
+    color: #5e5e5e;
+}
+
+h1 {
+    color: #5e5e5e;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=text] {
+    border: 2px solid #5e5e5e;
+    border-radius: 4px;
+}
+
+.currentGradeDisplay {
+    margin: auto;
+    border: 3px solid #5e5e5e;
+    width: 250px;
+    height: 50px;
+}
+
+.finalGradeDisplay {
+    margin: auto;
+    border: 3px solid #5e5e5e;
+    width: 450px;
+    height: 50px;
+}
